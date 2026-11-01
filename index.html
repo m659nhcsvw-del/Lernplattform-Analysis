@@ -11,7 +11,8 @@
   window.MathJax = {
     tex: { inlineMath: [["$","$"]], displayMath: [["$$","$$"]] },
     svg: { fontCache: "global" },
-    options: { skipHtmlTags: ["script","noscript","style","textarea","pre","code"] }
+    startup: { typeset: false },
+    options: { skipHtmlTags: ["script","noscript","style","textarea","pre","code"], ignoreHtmlClass: "tex2jax_ignore", processHtmlClass: "tex2jax_process" }
   };
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.js"></script>
