@@ -273,7 +273,11 @@ body{margin:0;}
   ::selection{background:var(--nv-accent-soft);}
 
 </style>
+<script>(function(){var box;function show(t){try{if(!box){box=document.createElement("div");box.title="Zum Schließen antippen";box.style.cssText="position:fixed;left:0;right:0;bottom:0;z-index:99999;background:#7b1e1e;color:#fff;font:13px/1.4 monospace;padding:8px 12px;max-height:40vh;overflow:auto";box.addEventListener("click",function(){box.remove();box=null});(document.body||document.documentElement).appendChild(box)}var d=document.createElement("div");d.textContent=t;box.appendChild(d)}catch(e){}}
+window.addEventListener("error",function(e){var t=e.target;if(t&&t!==window&&(t.src||t.href)){show("Datei nicht geladen: "+(t.src||t.href))}else{show("Fehler: "+(e.message||"")+" ("+String(e.filename||"").split("/").pop()+":"+e.lineno+")")}},true);
+window.addEventListener("unhandledrejection",function(e){show("Fehler: "+(e.reason&&e.reason.message||e.reason))})})();</script>
 <link rel="stylesheet" href="shared/an.css">
+<link rel="stylesheet" href="neu/an-neu.css">
 </head>
 <body>
 <div class="nv-stickybar" id="an-sticky">
@@ -305,9 +309,11 @@ body{margin:0;}
   <section class="nv-panel" role="tabpanel" id="panel-start"></section>
   <section class="nv-panel" role="tabpanel" id="panel-k3"></section>
   <section class="nv-panel" role="tabpanel" id="panel-k4"></section>
+  <section class="nv-panel" role="tabpanel" id="panel-cas"></section>
   <section class="nv-panel" role="tabpanel" id="panel-afb1"></section>
   <section class="nv-panel" role="tabpanel" id="panel-afb2"></section>
   <section class="nv-panel" role="tabpanel" id="panel-afb3"></section>
+  <section class="nv-panel" role="tabpanel" id="panel-speicher"></section>
   <section class="nv-panel" role="tabpanel" id="panel-karten"></section>
   <section class="nv-panel" role="tabpanel" id="panel-werkzeuge"></section>
 </main>
@@ -341,6 +347,12 @@ body{margin:0;}
 <script src="inhalt/k3-de.js"></script>
 <script src="inhalt/k4-de.js"></script>
 <!--INHALT-ENDE-->
+<script src="neu/an-cas-engine.js"></script>
+<script src="neu/an-neu.js"></script>
+<script src="neu/inhalt-neu.js"></script>
+<script src="neu/inhalt-speicher.js"></script>
+<script src="neu/inhalt-cas.js"></script>
+<script src="neu/fehler-zusatz.js"></script>
 <script>AN_start();</script>
 <!-- URHEBER-START --><footer class="urheber-be" role="contentinfo" style="display:flex;flex-wrap:wrap;justify-content:center;gap:2px 28px;margin:28px auto 0;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));border-top:1px solid rgba(128,128,128,.35);font:12px/1.45 -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;color:inherit;opacity:.72;text-align:center;clear:both;position:relative;z-index:1"><span>Copyright B. Ericke - Schuljahr 2026/2027.</span><span>Nur für den Unterricht.</span><span>Weitergabe, Veränderungen, Veröffentlichung durch Dritte nicht gestattet.</span></footer><!-- URHEBER-ENDE -->
 </body>
